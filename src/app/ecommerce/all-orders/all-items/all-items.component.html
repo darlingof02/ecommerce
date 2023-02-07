@@ -1,0 +1,23 @@
+<h4>Demo for OrderDetail</h4>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">name</th>
+			<th scope="col">shop</th>
+			<th scope="col">price</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let item of order?.itemList; index as i">
+			<th scope="row">{{ i + 1 }}</th>
+			<td>
+				{{ item.itemname }}
+			</td>
+			<td>{{ item.shopname }}</td>
+			<td>{{ item.price }}</td>
+            
+		</tr>
+	</tbody>
+</table>

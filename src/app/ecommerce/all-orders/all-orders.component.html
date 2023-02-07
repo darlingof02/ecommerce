@@ -1,0 +1,34 @@
+
+
+<h3>Demo for All Orders</h3>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+            <th scope="col">username</th>
+			<th scope="col">id</th>
+			<th scope="col">price</th>
+            <th scope="col">details</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let order of userOrders; index as i">
+			<th scope="row">{{ i + 1 }}</th>
+            <td>
+                {{order.username }}
+            </td>
+			<td>
+				{{ order.order.id}}
+			</td>
+			<td>{{ sumOfOrder(order) }}</td>
+			<button type="button" class="btn btn-primary" (click)="checkDetails(order)">checkDetails</button>
+		</tr>
+	</tbody>
+</table>
+
+
+<app-all-items [order]="chosenOrder" ></app-all-items>
+
+
+
